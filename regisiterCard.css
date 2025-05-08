@@ -1,0 +1,97 @@
+
+:root {
+    --primary:#396dff
+    --white: #ffffff
+
+    --xs: 4px;
+    --s: 8px;
+    --m: 16px;
+    --l: 24px;
+}
+/* 重置所有元素的默认边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 垂直居中 */
+    width: 100%;
+    position: relative;
+    padding: 20px; /* 添加内边距 */
+    background-color: rgba(0,0,0,0.2); /* 临时添加背景色方便查看 */
+}
+
+header a {
+    position: absolute;
+    right: 20px; /* 距离右边20px */
+    top: 50%; /* 从顶部50%开始 */
+    transform: translateY(-50%); /* 精确垂直居中 */
+    color: gold;
+    font-size: 18px;
+    text-decoration: none; /* 移除下划线 */
+    padding: 5px 10px;
+    border: 1px solid gold; /* 临时添加边框方便查看 */
+}
+
+header h1 {
+    color: fuchsia;
+    font-style: italic;
+    font-size: 30px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 移除了 justify-content: center 以避免header被挤到中间 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(pic/wall.jpg);
+    background-size: cover;
+    color: #ac8d69;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex: 1; /* 占据剩余空间 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.card {
+    width: 300px;
+    background-color: #1c3496;
+    color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.input-group {
+    margin-top: 20px;
+}

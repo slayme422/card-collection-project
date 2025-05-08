@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>创建卡片</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navContainer">
+  <h1 class="navTitle">创建你的专属卡片</h1>
+  </nav>
+  <!-- 卡片预览 -->
+  <div class="card utextCenter" id="card">
+    <img id="previewImg" src="https://via.placeholder.com/300x200" alt="预览图">
+    <h2 id="previewTitle">卡片名称</h2>
+    <p id="previewDesc">卡片描述</p>
+  </div>
+
+  <!-- 控制区域 -->
+  <div class="controls">
+    <label>上传图片: <input type="file" id="imgInput"></label>
+    <label>标题: <input type="text" id="titleInput" placeholder="卡片名称"></label>
+    <label>描述: <input type="text" id="descInput" placeholder="卡片描述"></label>
+    <label>背景颜色: <input type="color" id="bgColorInput" value="#1c3496"></label>
+    <label>字体颜色: <input type="color" id="fontColorInput" value="#ffffff"></label>
+  </div>
+
+  <script>
+    const previewImg = document.getElementById('previewImg');
+    const titleInput = document.getElementById('titleInput');
+    const descInput = document.getElementById('descInput');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewDesc = document.getElementById('previewDesc');
+    const bgColorInput = document.getElementById('bgColorInput');
+    const fontColorInput = document.getElementById('fontColorInput');
+    const card = document.getElementById('card');
+
+    document.getElementById('imgInput').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        previewImg.src = URL.createObjectURL(file);
+      }
+    });
+
+    titleInput.addEventListener('input', () => {
+      previewTitle.textContent = titleInput.value;
+    });
+
+    descInput.addEventListener('input', () => {
+      previewDesc.textContent = descInput.value;
+    });
+
+    bgColorInput.addEventListener('input', () => {
+      card.style.backgroundColor = bgColorInput.value;
+    });
+
+    fontColorInput.addEventListener('input', () => {
+      previewTitle.style.color = fontColorInput.value;
+      previewDesc.style.color = fontColorInput.value;
+    });
+  </script>
+
+</body>
+</html>

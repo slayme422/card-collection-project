@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+    --primary:#396dff;
+  --fontPrimary: #6c1784;
+  --grey: #f7f7f7;
+  --white: #ffffff;
+  
+  --xs: 4px;
+  --s: 8px;
+  --m: 16px;
+  --l: 24px;
+}
+.utextCenter {
+  text-align: center;
+}
+body {
+  font-family: "Open Sans", "sans-serif"; /* 正确的字体 */
+  background: #a95656; /* 全局背景颜色 */
+  display: flex; /* 横着排列 */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* 内容与边框之间有间隔 */
+}
+.navContainer {
+    background-color: var(--white);
+    padding: var(--s) var(--m);
+}
+.navTitle {
+  color: var(--fontPrimary);
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+}
+.card {
+  width: 300px; /*设置卡片的宽度*/
+  border-radius: var(--m); /*设置图片的四个角呈圆角*/
+  background-color: #1c3496; /*设置背景颜色*/
+  color: white; /*设置文字颜色*/
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 300px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}

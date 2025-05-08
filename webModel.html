@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义卡片生成器</title>
+  <style>
+    body {
+    
+      background-color: #f0f0f0;  /* 网页的背景颜色*/  
+      font-family: Arial, sans-serif;/* 网页的字体*/
+      display: flex;/* 排版灵活*/
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .input-area {
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #6789ab;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      width: 90%;
+      border-radius: 15px;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
+      color: white;
+    }
+
+    .card p {
+      color: #ffe0e0;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="input-area">
+    <input type="file" id="imageInput">
+    <input type="text" id="nameInput" placeholder="输入角色名字">
+    <input type="text" id="idInput" placeholder="输入ID">
+    <button onclick="createCard()">生成卡片</button>
+  </div>
+
+  <div class="card-container" id="cardContainer">
+    <!-- 生成的卡片会出现在这里 -->
+  </div>
+
+<script>
+function createCard() {
+  const imageInput = document.getElementById('imageInput');
+  const nameInput = document.getElementById('nameInput').value;
+  const idInput = document.getElementById('idInput').value;
+  const cardContainer = document.getElementById('cardContainer');
+
+  const file = imageInput.files[0];
+  if (!file) {
+    alert("请先上传一张图片！");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const imageUrl = e.target.result;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <img src="${imageUrl}" alt="角色图片">
+      <h2>${nameInput}</h2>
+      <p>ID: ${idInput}</p>
+    `;
+
+    cardContainer.appendChild(card);
+  };
+
+  reader.readAsDataURL(file); // 读取图片为Base64编码
+}
+</script>
+
+</body>
+</html>
