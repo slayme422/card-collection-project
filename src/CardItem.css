@@ -1,0 +1,35 @@
+.card {
+  background-color: #f2f3f4;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card img {
+  width: 95%;
+  border-radius: 20px;
+}
+
+.card h2 {
+  color: rgb(25, 9, 9);
+  margin: 10px 0;
+  font-weight: 900;
+}
+/*名言*/
+.card p {
+  font-family: "Georgia", "Times New Roman", serif; /* 更具文学感的字体 */
+  color: #5f0909d7; /* 深红色，增加名言的情感冲击 */
+  font-size: 18px; /* 略小于其他文本，突出名言 */
+  line-height: 1.6; /* 行间距适中，增强可读性 */
+  font-style: inherit; /* 斜体，给名言增加艺术感 */
+  text-align: center; /* 居中对齐，使名言更显眼 */
+  padding: 20px; /* 为名言增加内边距，避免文本太紧密 */
+  border-left: 4px solid #bf1d1d; /* 左侧加一个小的红色边框，增加强调感 */
+  margin: 20px 0; /* 上下间距，避免与其他内容紧密 */
+}
+.card:hover {
+  transform: scale(1.05);
+}

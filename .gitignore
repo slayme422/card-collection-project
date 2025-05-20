@@ -1,0 +1,13 @@
+# macOS 系统文件
+.DS_Store
+
+# Node 依赖
+node_modules/
+
+# VSCode 配置（如果你不想提交）
+.vscode/
+
+# 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
