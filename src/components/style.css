@@ -14,6 +14,7 @@
 .utextCenter {
   text-align: center;
 }
+
 body {
   font-family: "Open Sans", "sans-serif"; /* 正确的字体 */
   background: #a95656; /* 全局背景颜色 */
@@ -21,6 +22,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px; /* 内容与边框之间有间隔 */
+  margin: 0;
+  padding: 0;
 }
 .cardTitle {
   padding: 0px;

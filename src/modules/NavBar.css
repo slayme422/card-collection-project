@@ -1,0 +1,19 @@
+.NavBarContainer {
+  background-color: #c82c2c;
+  display: flex;
+  width: 100vw;       /* 占满整个视口宽度 */
+  height: 60px;        /* 你可以根据需要设置高度 */
+}
+.NavBarSmallBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98px;
+    height: 24px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    
+}
+
